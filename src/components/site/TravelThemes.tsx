@@ -10,7 +10,7 @@ const themes = [
   { icon: Sun, title: "Summer", subtitle: "ESCAPES", desc: "Sunshine, beaches & unforgettable adventures.", img: summer, accent: "from-amber-500 to-orange-600" },
   { icon: CloudRain, title: "Monsoon", subtitle: "GETAWAYS", desc: "Green landscapes, misty hills & peaceful escapes.", img: monsoon, accent: "from-emerald-500 to-green-700" },
   { icon: Plane, title: "International", subtitle: "LUXURY", desc: "Exotic destinations & world-class experiences.", img: intl, accent: "from-violet-500 to-purple-700" },
-  { icon: Sparkles, title: "Spiritual", subtitle: "JOURNEYS", desc: "Find peace, seek blessings & reconnect within.", img: spiritual, accent: "from-rose-500 to-orange-600" },
+  { icon: Sparkles, title: "Spiritual", subtitle: "JOURNEYS", desc: "Find peace, seek blessings & reconnect within.", img: spiritual, accent: "from-primary to-primary-glow" },
 ];
 
 export const TravelThemes = () => {

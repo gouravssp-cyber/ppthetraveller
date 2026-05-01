@@ -45,7 +45,7 @@
 
     /* Gradients */
     --gradient-sunset: linear-gradient(135deg, hsl(18 95% 55%), hsl(30 100% 62%));
-    --gradient-sunset-soft: linear-gradient(135deg, hsl(18 95% 55% / 0.95), hsl(345 85% 60% / 0.9));
+    --gradient-sunset-soft: linear-gradient(135deg, hsl(18 95% 55% / 0.95), hsl(30 100% 62% / 0.9));
     --gradient-hero-overlay: linear-gradient(
       90deg,
       hsl(220 35% 6% / 0.85) 0%,
@@ -58,7 +58,7 @@
       hsl(220 35% 6% / 0.45) 50%,
       hsl(220 35% 6% / 0) 100%
     );
-    --gradient-honeymoon: linear-gradient(135deg, hsl(345 85% 60%), hsl(20 90% 65%));
+    --gradient-honeymoon: linear-gradient(135deg, hsl(18 95% 55%), hsl(30 100% 62%));
 
     /* Shadows */
     --shadow-card: 0 10px 40px -12px hsl(220 35% 8% / 0.18);
