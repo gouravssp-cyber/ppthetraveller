@@ -1,7 +1,7 @@
 import { Star, Quote } from "lucide-react";
 
 const testimonials = [
-  { name: "Aarav & Priya", trip: "Maldives Honeymoon", text: "Absolutely magical! Every detail was taken care of — from the overwater villa to the candlelit dinner. We didn't have to worry about a single thing.", avatar: "AP" },
+  { name: "Anjali Patel", trip: "Kerala Backwaters", text: "Truly a paradise! The Kerala backwaters tour was so relaxing and rejuvenating. The houseboats, local cuisine and serene landscapes exceeded all expectations. Can't wait to book another trip!", avatar: "AP" },
   { name: "Priya Sharma", trip: "Kashmir Honeymoon", text: "The Kashmir tour was absolutely breathtaking! Every moment was perfectly planned, from Shikara rides on Dal Lake to luxury houseboat stays. PP The Traveller made our honeymoon unforgettable!", avatar: "PS" },
   { name: "Rajesh Kumar", trip: "Rajasthan Heritage", text: "An incredible 7-day journey through Rajasthan! Knowledgeable guides, fantastic accommodations and every moment felt magical. Highly recommend PP The Traveller for a premium experience.", avatar: "RK" },
 ];
