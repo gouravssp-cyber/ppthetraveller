@@ -44,7 +44,7 @@ export const SupportSection = () => {
                 {/* header */}
                 <div className="px-4 pt-8 pb-3 border-b border-border">
                   <p className="text-[10px] text-muted-foreground mb-1">9:41</p>
-                  <p className="text-sm font-bold text-secondary">← Wanderly Travel Support</p>
+                  <p className="text-sm font-bold text-secondary">← PP The Traveller Support</p>
                 </div>
                 {/* messages */}
                 <div className="flex-1 overflow-hidden p-3 space-y-2 bg-muted/30">
@@ -55,7 +55,7 @@ export const SupportSection = () => {
                           ? "bg-gradient-sunset text-white rounded-br-sm"
                           : "bg-card border border-border text-secondary rounded-bl-sm"
                       }`}>
-                        {m.from === "agent" && <p className="text-[10px] font-bold text-primary mb-0.5">Wanderly</p>}
+                        {m.from === "agent" && <p className="text-[10px] font-bold text-primary mb-0.5">PP The Traveller</p>}
                         {m.text}
                       </div>
                     </div>

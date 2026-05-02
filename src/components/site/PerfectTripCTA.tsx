@@ -33,13 +33,13 @@ export const PerfectTripCTA = () => {
                 <Button variant="hero" size="xl">
                   <MessageCircle className="h-5 w-5" /> Chat on WhatsApp <ArrowRight className="h-5 w-5" />
                 </Button>
-                <a href="tel:+911234567890" className="flex items-center gap-3 bg-card border border-border rounded-full px-6 h-14 hover:border-primary transition-colors">
+                <a href="tel:+919910141081" className="flex items-center gap-3 bg-card border border-border rounded-full px-6 h-14 hover:border-primary transition-colors">
                   <span className="h-9 w-9 rounded-full bg-primary/10 flex items-center justify-center">
                     <Phone className="h-4 w-4 text-primary" />
                   </span>
                   <div className="leading-tight">
                     <p className="text-xs font-bold text-secondary">Call Us Now</p>
-                    <p className="text-sm font-semibold text-secondary">+91 123 456 7890</p>
+                    <p className="text-sm font-semibold text-secondary">+91 99101 41081</p>
                   </div>
                 </a>
               </div>

@@ -1,6 +1,7 @@
-import { Plane, Phone, Facebook, Instagram, Youtube, Twitter, Menu, User, UserPlus } from "lucide-react";
+import { Phone, Facebook, Instagram, Youtube, Twitter, Menu, User, UserPlus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import logo from "@/assets/pp-traveller-logo.webp";
 
 const navLinks = ["Home", "Packages", "Destinations", "Custom Trip", "About", "Blog", "Contact"];
 
@@ -29,8 +30,8 @@ export const SiteHeader = () => {
             <button className="flex items-center gap-1.5 hover:text-primary transition-colors">
               <UserPlus className="h-3.5 w-3.5" /> Sign Up
             </button>
-            <a href="tel:+919876543210" className="flex items-center gap-1.5 text-primary font-semibold">
-              <Phone className="h-3.5 w-3.5" /> +91 98765 43210
+            <a href="tel:+919910141081" className="flex items-center gap-1.5 text-primary font-semibold">
+              <Phone className="h-3.5 w-3.5" /> +91 99101 41081
             </a>
           </div>
         </div>
@@ -38,11 +39,11 @@ export const SiteHeader = () => {
 
       {/* Main nav */}
       <nav className="container flex items-center justify-between py-5">
-        <a href="#" className="flex items-center gap-2 text-white">
-          <div className="relative">
-            <span className="text-3xl font-extrabold tracking-tight">Wander<span className="text-primary">ly</span></span>
-            <Plane className="absolute -top-2 -right-5 h-4 w-4 text-primary rotate-45" />
-          </div>
+        <a href="#" className="flex items-center gap-3 text-white">
+          <img src={logo} alt="PP The Traveller logo" width={56} height={56} className="h-14 w-14 object-contain drop-shadow-lg" />
+          <span className="hidden sm:block text-2xl font-extrabold tracking-tight leading-none">
+            PP <span className="text-primary">The Traveller</span>
+          </span>
         </a>
 
         <ul className="hidden lg:flex items-center gap-8 text-white/90 font-medium">
