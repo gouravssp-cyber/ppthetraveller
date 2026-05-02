@@ -25,15 +25,15 @@ export const AboutTravel = () => {
       <div className="container relative grid lg:grid-cols-2 gap-14 items-center">
         {/* Left: copy */}
         <div className="animate-fade-up">
-          <p className="font-script text-2xl text-primary mb-2">We Are Wanderly</p>
+          <p className="font-script text-2xl text-primary mb-2">We Are PP The Traveller</p>
           <h2 className="text-4xl md:text-5xl font-extrabold text-secondary leading-[1.1] mb-5">
-            We Are The Best For <br/> Your Travel
+            Why Choose <br/> PP The Traveller
           </h2>
           <p className="text-muted-foreground text-base mb-4 max-w-lg">
-            From the misty hills of Meghalaya to the sunlit cliffs of Santorini — we craft journeys that fit you. Real itineraries, real humans, real memories.
+            From the misty hills of Meghalaya to the temples and beaches of Thailand — we craft innovative tour plans suited to your interests, with expert guides and flexible payment options.
           </p>
           <p className="text-muted-foreground text-base mb-8 max-w-lg">
-            A decade of travel design, 10,000+ happy travelers, and a 4.9★ rating across Google. We don't just book trips, we build stories.
+            3,500+ happy travelers, 3,400+ successful tours and 98% positive reviews. Tailor-made packages, high-quality management and 24/7 support.
           </p>
 
           <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-3 mb-9">
