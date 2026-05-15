@@ -1,4 +1,5 @@
 import { Snowflake, Sun, CloudRain, Plane, Sparkles, ArrowRight } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import winter from "@/assets/theme-winter.jpg";
 import summer from "@/assets/theme-summer.jpg";
 import monsoon from "@/assets/theme-monsoon.jpg";
@@ -25,29 +26,34 @@ export const TravelThemes = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
-          {themes.map((t, i) => (
-            <article
-              key={t.title}
-              className="group relative aspect-[3/5] rounded-3xl overflow-hidden cursor-pointer shadow-card hover:shadow-elevated transition-all duration-500"
-              style={{ animationDelay: `${i * 80}ms` }}
-            >
-              <img src={t.img} alt={t.title} loading="lazy" className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-card-overlay" />
-              <div className={`absolute top-4 left-4 h-11 w-11 rounded-full bg-gradient-to-br ${t.accent} flex items-center justify-center shadow-lg`}>
-                <t.icon className="h-5 w-5 text-white" />
-              </div>
-              <div className="absolute inset-x-0 bottom-0 p-5 text-white">
-                <h3 className="font-script text-3xl leading-none">{t.title}</h3>
-                <p className="font-extrabold tracking-wider text-sm mb-2">{t.subtitle}</p>
-                <p className="text-xs text-white/85 mb-4 leading-snug">{t.desc}</p>
-                <button className="w-full bg-white text-secondary font-semibold text-xs py-2 rounded-full flex items-center justify-center gap-1 hover:bg-primary hover:text-primary-foreground transition-colors">
-                  Explore Trips <ArrowRight className="h-3 w-3" />
-                </button>
-              </div>
-            </article>
-          ))}
-        </div>
+        <Carousel opts={{ align: "start", loop: true }} className="w-full">
+          <CarouselContent className="-ml-5">
+            {themes.map((t, i) => (
+              <CarouselItem key={t.title} className="pl-5 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/5">
+                <article
+                  className="group relative aspect-[3/5] rounded-3xl overflow-hidden cursor-pointer shadow-card hover:shadow-elevated transition-all duration-500"
+                  style={{ animationDelay: `${i * 80}ms` }}
+                >
+                  <img src={t.img} alt={t.title} loading="lazy" className="absolute inset-0 h-full w-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-card-overlay" />
+                  <div className={`absolute top-4 left-4 h-11 w-11 rounded-full bg-gradient-to-br ${t.accent} flex items-center justify-center shadow-lg`}>
+                    <t.icon className="h-5 w-5 text-white" />
+                  </div>
+                  <div className="absolute inset-x-0 bottom-0 p-5 text-white">
+                    <h3 className="font-script text-3xl leading-none">{t.title}</h3>
+                    <p className="font-extrabold tracking-wider text-sm mb-2">{t.subtitle}</p>
+                    <p className="text-xs text-white/85 mb-4 leading-snug">{t.desc}</p>
+                    <button className="w-full bg-white text-secondary font-semibold text-xs py-2 rounded-full flex items-center justify-center gap-1 hover:bg-primary hover:text-primary-foreground transition-colors">
+                      Explore Trips <ArrowRight className="h-3 w-3" />
+                    </button>
+                  </div>
+                </article>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex -left-4" />
+          <CarouselNext className="hidden md:flex -right-4" />
+        </Carousel>
       </div>
     </section>
   );
