@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Heart, Bed, Landmark, Utensils, Bus, ArrowRight, Phone, Headphones, ShieldCheck, CalendarCheck, Flower2, Star, MessageCircle, Plane } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import chardham from "@/assets/pil-chardham.jpg";
 import vaishno from "@/assets/pil-vaishno.jpg";
 import rameshwaram from "@/assets/pil-rameshwaram.jpg";
@@ -54,10 +55,12 @@ export const PilgrimPackages = () => {
           ))}
         </div>
 
-        {/* Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Cards Carousel */}
+        <Carousel opts={{ align: "start", loop: true }} className="px-2">
+          <CarouselContent className="-ml-6">
           {packages.map((p) => (
-            <article key={p.name} className="group bg-card rounded-3xl overflow-hidden border border-border shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all">
+            <CarouselItem key={p.name} className="pl-6 basis-full sm:basis-1/2 lg:basis-1/4">
+            <article className="group bg-card rounded-3xl overflow-hidden border border-border shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all h-full">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img src={p.img} alt={p.name} loading="lazy" width={1024} height={768} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <span className="absolute top-3 left-3 bg-primary text-primary-foreground text-[10px] font-bold px-3 py-1 rounded-md">{p.duration}</span>
@@ -86,8 +89,12 @@ export const PilgrimPackages = () => {
                 </Button>
               </div>
             </article>
+            </CarouselItem>
           ))}
-        </div>
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex -left-4" />
+          <CarouselNext className="hidden md:flex -right-4" />
+        </Carousel>
 
         {/* Bottom CTA strip */}
         <div className="mt-12 bg-card border border-border rounded-2xl p-5 md:p-6 grid md:grid-cols-3 gap-4 items-center shadow-card">
