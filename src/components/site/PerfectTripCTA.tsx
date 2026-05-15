@@ -16,24 +16,24 @@ export const PerfectTripCTA = () => {
         <div className="relative rounded-[2rem] overflow-hidden shadow-elevated border border-border bg-gradient-to-br from-primary/5 via-card to-primary/10">
           <div className="grid lg:grid-cols-2">
             {/* Left content */}
-            <div className="p-8 md:p-12 lg:p-14 relative">
+            <div className="p-6 sm:p-8 md:p-12 lg:p-14 relative">
               <div className="flex items-center gap-3 mb-5">
-                <p className="text-primary font-bold tracking-wide">Ready for Your Next Adventure?</p>
+                <p className="text-primary font-bold tracking-wide text-sm sm:text-base">Ready for Your Next Adventure?</p>
                 <Send className="h-4 w-4 text-primary -rotate-12" />
               </div>
 
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-secondary leading-[1.05] mb-5">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-secondary leading-[1.05] mb-5">
                 Let's Plan Your <br/> Perfect Trip!
               </h2>
-              <p className="text-muted-foreground text-lg max-w-md mb-8">
+              <p className="text-muted-foreground text-base sm:text-lg max-w-md mb-8">
                 Tell us your travel dreams and we'll create an unforgettable experience just for you.
               </p>
 
-              <div className="flex flex-wrap gap-3 mb-10">
-                <Button variant="hero" size="xl">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 mb-10">
+                <Button variant="hero" size="xl" className="w-full sm:w-auto">
                   <MessageCircle className="h-5 w-5" /> Chat on WhatsApp <ArrowRight className="h-5 w-5" />
                 </Button>
-                <a href="tel:+919910141081" className="flex items-center gap-3 bg-card border border-border rounded-full px-6 h-14 hover:border-primary transition-colors">
+                <a href="tel:+919910141081" className="flex items-center gap-3 bg-card border border-border rounded-full px-6 h-14 hover:border-primary transition-colors w-full sm:w-auto justify-center sm:justify-start">
                   <span className="h-9 w-9 rounded-full bg-primary/10 flex items-center justify-center">
                     <Phone className="h-4 w-4 text-primary" />
                   </span>

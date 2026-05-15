@@ -15,38 +15,37 @@ export const InternationalBanner = () => {
         <div className="relative rounded-3xl shadow-elevated overflow-hidden border border-border">
           <div className="grid lg:grid-cols-2">
             {/* Left content */}
-            <div className="bg-card p-8 md:p-12 lg:p-14 relative z-10">
-              <div className="flex items-center gap-4 mb-5">
-                <span className="h-px w-8 bg-primary/40" />
+            <div className="bg-card p-6 sm:p-8 md:p-12 lg:p-14 relative z-10">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-4 mb-5">
+                <span className="hidden sm:block h-px w-8 bg-primary/40" />
                 <Plane className="h-4 w-4 text-primary -rotate-12" />
-                <span className="text-sm font-bold tracking-[0.25em] text-primary">INTERNATIONAL TOURS</span>
-                <span className="h-px w-8 bg-primary/40" />
+                <span className="text-xs sm:text-sm font-bold tracking-[0.25em] text-primary">INTERNATIONAL TOURS</span>
+                <span className="hidden sm:block h-px w-8 bg-primary/40" />
               </div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-secondary leading-[1.05]">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-secondary leading-[1.05]">
                 The World
               </h2>
-              <p className="font-script text-5xl md:text-6xl text-primary leading-tight mb-3">
+              <p className="font-script text-4xl sm:text-5xl md:text-6xl text-primary leading-tight mb-3">
                 Awaits You.
               </p>
               <div className="h-1 w-16 bg-primary rounded-full mb-8" />
 
-              <div className="flex flex-wrap items-center gap-x-8 gap-y-4 mb-9">
-                {features.map(({ icon: Icon, label }, i) => (
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-9">
+                {features.map(({ icon: Icon, label }) => (
                   <div key={label} className="flex items-center gap-3">
-                    <span className="h-12 w-12 rounded-full border border-border flex items-center justify-center">
+                    <span className="h-11 w-11 sm:h-12 sm:w-12 shrink-0 rounded-full border border-border flex items-center justify-center">
                       <Icon className="h-5 w-5 text-secondary" />
                     </span>
                     <p className="text-sm font-semibold text-secondary whitespace-pre-line leading-tight">{label}</p>
-                    {i < features.length - 1 && <span className="hidden sm:block h-8 w-px bg-border ml-2" />}
                   </div>
                 ))}
               </div>
 
-              <div className="flex flex-wrap gap-3">
-                <Button variant="hero" size="xl">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+                <Button variant="hero" size="xl" className="w-full sm:w-auto">
                   <Compass className="h-5 w-5" /> Explore International Tours
                 </Button>
-                <Button variant="outline" size="xl" className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white">
+                <Button variant="outline" size="xl" className="w-full sm:w-auto border-2 border-secondary text-secondary hover:bg-secondary hover:text-white">
                   <MessageCircle className="h-5 w-5" /> Plan on WhatsApp
                 </Button>
               </div>
