@@ -1,5 +1,6 @@
-import { Heart, Gift, ShieldCheck, Headphones, Bed, Coffee, Calendar, MapPin, Star, ChevronLeft, ChevronRight, MessageCircle, ArrowRight } from "lucide-react";
+import { Heart, Gift, ShieldCheck, Headphones, Bed, Coffee, Calendar, MapPin, Star, MessageCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import maldives from "@/assets/pkg-maldives.jpg";
 import switzerland from "@/assets/pkg-switzerland.jpg";
 import greece from "@/assets/pkg-greece.jpg";
@@ -32,10 +33,11 @@ export const HoneymoonPackages = () => {
           </div>
         </div>
 
-        <div className="relative">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <Carousel opts={{ align: "start", loop: true }} className="px-2">
+          <CarouselContent className="-ml-6">
             {packages.map((p) => (
-              <article key={p.title} className="bg-card rounded-3xl overflow-hidden shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all duration-500 border border-border">
+              <CarouselItem key={p.title} className="pl-6 basis-full sm:basis-1/2 lg:basis-1/4">
+              <article className="bg-card rounded-3xl overflow-hidden shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all duration-500 border border-border h-full">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img src={p.img} alt={p.title} loading="lazy" className="h-full w-full object-cover" />
                   <span className="absolute top-3 left-3 bg-gradient-sunset text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-lg">
@@ -67,16 +69,12 @@ export const HoneymoonPackages = () => {
                   </div>
                 </div>
               </article>
+              </CarouselItem>
             ))}
-          </div>
-
-          <button className="hidden lg:flex absolute -left-6 top-1/2 -translate-y-1/2 h-11 w-11 items-center justify-center rounded-full bg-card shadow-card hover:bg-primary hover:text-white transition-colors">
-            <ChevronLeft className="h-5 w-5" />
-          </button>
-          <button className="hidden lg:flex absolute -right-6 top-1/2 -translate-y-1/2 h-11 w-11 items-center justify-center rounded-full bg-card shadow-card hover:bg-primary hover:text-white transition-colors">
-            <ChevronRight className="h-5 w-5" />
-          </button>
-        </div>
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex -left-4" />
+          <CarouselNext className="hidden md:flex -right-4" />
+        </Carousel>
 
         {/* CTA Banner */}
         <div className="mt-12 bg-primary/5 rounded-3xl p-6 md:p-8 flex flex-wrap items-center gap-6 justify-between">

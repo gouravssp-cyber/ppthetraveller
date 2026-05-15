@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Heart, MapPin, Bed, Utensils, Camera, Bus, Star, ArrowRight, Globe, Mountain, Palmtree, Building2, PawPrint, Flower2, Landmark } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import darjeeling from "@/assets/dom-darjeeling.jpg";
 import goa from "@/assets/dom-goa.jpg";
 import manali from "@/assets/dom-manali.jpg";
@@ -58,10 +59,12 @@ export const DomesticPackages = () => {
           ))}
         </div>
 
-        {/* Cards */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Cards Carousel */}
+        <Carousel opts={{ align: "start", loop: true }} className="px-2">
+          <CarouselContent className="-ml-6">
           {list.map((p) => (
-            <article key={p.name} className="group bg-card rounded-3xl overflow-hidden border border-border shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all">
+            <CarouselItem key={p.name} className="pl-6 basis-full sm:basis-1/2 lg:basis-1/4">
+            <article className="group bg-card rounded-3xl overflow-hidden border border-border shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all h-full">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img src={p.img} alt={p.name} loading="lazy" width={1024} height={768} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <span className="absolute top-3 left-3 bg-primary text-primary-foreground text-[10px] font-bold tracking-wider px-3 py-1 rounded-md">{p.tag}</span>
@@ -95,8 +98,12 @@ export const DomesticPackages = () => {
                 </div>
               </div>
             </article>
+            </CarouselItem>
           ))}
-        </div>
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex -left-4" />
+          <CarouselNext className="hidden md:flex -right-4" />
+        </Carousel>
 
         <div className="flex justify-center mt-12">
           <Button variant="hero" size="xl">

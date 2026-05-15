@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Heart, MapPin, Clock, Bed, Utensils, MessageCircle, ArrowRight, Tag, LayoutGrid, ShieldCheck, Users, Headphones, CalendarCheck } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import goa from "@/assets/dom-goa.jpg";
 import manali from "@/assets/dom-manali.jpg";
 import kerala from "@/assets/bud-kerala.jpg";
@@ -69,9 +70,11 @@ export const BudgetPackages = () => {
         </div>
         <p className="text-center text-sm text-muted-foreground mb-10">Showing <strong className="text-primary">{list.length}</strong> packages</p>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <Carousel opts={{ align: "start", loop: true }} className="px-2">
+          <CarouselContent className="-ml-6">
           {list.map((p) => (
-            <article key={p.name} className="group bg-card rounded-3xl overflow-hidden border border-border shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all">
+            <CarouselItem key={p.name} className="pl-6 basis-full sm:basis-1/2 lg:basis-1/4">
+            <article className="group bg-card rounded-3xl overflow-hidden border border-border shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all h-full">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img src={p.img} alt={p.name} loading="lazy" width={1024} height={768} className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <span className="absolute top-3 left-3 bg-card/95 text-primary text-[10px] font-bold tracking-wider px-3 py-1 rounded-md border border-primary/30">{p.tag}</span>
@@ -104,8 +107,12 @@ export const BudgetPackages = () => {
                 </Button>
               </div>
             </article>
+            </CarouselItem>
           ))}
-        </div>
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex -left-4" />
+          <CarouselNext className="hidden md:flex -right-4" />
+        </Carousel>
 
         {/* Bottom perks strip */}
         <div className="mt-12 bg-card border border-border rounded-2xl p-6 grid grid-cols-2 lg:grid-cols-4 gap-6 shadow-card">
