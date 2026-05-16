@@ -44,7 +44,7 @@ export const HoneymoonPackages = () => {
             </div>
 
             {/* Feature Highlights */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="hidden md:flex justify-center grid grid-cols-1 sm:grid-cols-3 gap-4">
               <Perk icon={Gift} title="Romantic Experiences" desc="Curated for Couples" />
               <Perk icon={ShieldCheck} title="Best Price Guarantee" desc="Unbeatable Deals" />
               <Perk icon={Headphones} title="24x7 Couple Support" desc="We're Always Here" />

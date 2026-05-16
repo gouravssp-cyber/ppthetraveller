@@ -53,7 +53,7 @@ export const BudgetPackages = () => {
         </div>
 
         {/* Pill tabs in card */}
-        <div className="flex justify-center mb-4">
+        <div className="flex hidden md:flex justify-center mb-4">
           <div className="inline-flex flex-wrap items-center gap-1 bg-card border border-border rounded-full p-1.5 shadow-card">
             {tabs.map(({ key, label, icon: Icon }) => (
               <button
@@ -122,8 +122,7 @@ export const BudgetPackages = () => {
                 <Icon className="h-5 w-5 text-primary" />
               </span>
               <div>
-                <p className="font-bold text-secondary text-sm">{title}</p>
-                <p className="text-xs text-muted-foreground leading-snug">{desc}</p>
+                <p className="font-bold text-secondary text-sm">{title}</p>                
               </div>
             </div>
           ))}
