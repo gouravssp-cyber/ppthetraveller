@@ -29,7 +29,7 @@ export const TrendingDestinations = () => {
   const list = tab === "domestic" ? domestic : international;
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-14 bg-background">
       <div className="container">
         <div className="flex flex-wrap items-center justify-between gap-4 mb-12">
           <div>

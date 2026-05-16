@@ -33,7 +33,7 @@ const chat = [
 
 export const SupportSection = () => {
   return (
-    <section className="py-24 bg-muted/40">
+    <section className="py-14 bg-muted/40">
       <div className="container grid lg:grid-cols-12 gap-12 items-center">
         {/* Phone mockup */}
         <div className="lg:col-span-5 flex justify-center">

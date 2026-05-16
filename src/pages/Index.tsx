@@ -16,11 +16,13 @@ import { FAQ } from "@/components/site/FAQ";
 import { PerfectTripCTA } from "@/components/site/PerfectTripCTA";
 import { BookingSection } from "@/components/site/BookingSection";
 import { SiteFooter } from "@/components/site/SiteFooter";
+import TourDetailsPage from "@/components/site/TourDetailsPage";
 
 const Index = () => {
   return (
     <main className="min-h-screen bg-background">
       <SiteHeader />
+      {/* <TourDetailsPage/> */}
       <Hero />
       <TrendingDestinations />
       <AboutTravel />

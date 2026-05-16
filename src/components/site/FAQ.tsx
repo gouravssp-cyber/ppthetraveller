@@ -16,7 +16,7 @@ export const FAQ = () => {
   const [open, setOpen] = useState(0);
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-14 bg-background">
       <div className="container">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-3 mb-3">

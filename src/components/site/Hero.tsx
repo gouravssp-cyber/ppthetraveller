@@ -91,7 +91,7 @@ export const Hero = () => {
       </div>
 
       {/* Floating play button (decorative) */}
-      <div className="hidden xl:flex absolute right-[34%] top-[44%] flex-col items-center gap-2 animate-float">
+      <div className="hidden xl:flex absolute right-[44%] top-[44%] flex-col items-center gap-2 animate-float">
         <span className="font-script text-xl text-white">Watch the<br/>Meghalaya Story</span>
         <button className="h-16 w-16 rounded-full bg-white/15 backdrop-blur-md border border-white/40 flex items-center justify-center hover:bg-white/25 transition-colors">
           <Play className="h-6 w-6 text-white fill-white ml-1" />

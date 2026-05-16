@@ -28,7 +28,7 @@ export const InternationalPackages = () => {
   const list = active === "all" ? packages : packages.filter((p) => p.cat === active);
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-14 bg-background">
       <div className="container">
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-3 mb-3">

@@ -15,7 +15,7 @@ const points = [
 
 export const AboutTravel = () => {
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section className="py-14 bg-background relative overflow-hidden">
       {/* Decorative dotted lines */}
       <svg className="absolute left-0 bottom-10 w-[480px] opacity-[0.08] text-primary hidden lg:block" viewBox="0 0 400 200" fill="none" aria-hidden>
         <path d="M0 180 Q 100 80 200 140 T 400 60" stroke="currentColor" strokeWidth="1.5" strokeDasharray="3 6" />

@@ -8,7 +8,7 @@ const testimonials = [
 
 export const Testimonials = () => {
   return (
-    <section className="py-24 bg-secondary text-white relative overflow-hidden">
+    <section className="py-14 bg-secondary text-white relative overflow-hidden">
       <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary))_0%,transparent_50%),radial-gradient(circle_at_80%_80%,hsl(var(--primary-glow))_0%,transparent_50%)]" />
       <div className="container relative">
         <div className="text-center mb-14">

@@ -22,7 +22,7 @@ const packages = [
 
 export const PilgrimPackages = () => {
   return (
-    <section className="py-24 bg-gradient-to-b from-primary/5 to-background relative overflow-hidden">
+    <section className="py-14 bg-gradient-to-b from-primary/5 to-background relative overflow-hidden">
       {/* Decorative temple silhouettes */}
       <div className="absolute inset-x-0 top-0 h-40 opacity-[0.06] pointer-events-none bg-[radial-gradient(circle_at_10%_80%,hsl(var(--primary))_0%,transparent_30%),radial-gradient(circle_at_90%_80%,hsl(var(--primary))_0%,transparent_30%)]" />
 

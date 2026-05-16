@@ -34,7 +34,7 @@ export const BudgetPackages = () => {
   const list = active === "all" ? packages : packages.filter((p) => p.cat === active);
 
   return (
-    <section className="py-24 bg-muted/30 relative overflow-hidden">
+    <section className="py-14 bg-muted/30 relative overflow-hidden">
       {/* decorative dotted line */}
       <svg className="absolute inset-0 w-full h-full opacity-[0.05] pointer-events-none" viewBox="0 0 1200 800" fill="none">
         <path d="M0 600 Q 300 400 600 600 T 1200 500" stroke="hsl(var(--primary))" strokeWidth="2" strokeDasharray="4 8" />

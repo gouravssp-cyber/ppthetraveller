@@ -18,7 +18,7 @@ export const BookingSection = () => {
   };
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-14 bg-background">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           {/* Image side */}

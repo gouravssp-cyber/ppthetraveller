@@ -16,7 +16,7 @@ const themes = [
 
 export const TravelThemes = () => {
   return (
-    <section className="py-24 bg-muted/40">
+    <section className="py-14 bg-muted/40">
       <div className="container">
         <div className="text-center mb-14">
           <p className="font-script text-2xl text-primary">Pick your vibe</p>
