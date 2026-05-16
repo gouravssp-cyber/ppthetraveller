@@ -5,80 +5,117 @@
 /* Travel website design system — Dark cinematic with vibrant orange accents */
 
 @layer base {
-  :root {
-    /* Base */
-    --background: 24 20% 98%;
-    --foreground: 220 30% 8%;
+ :root {
+    --background: 160 20% 97%;
+    --foreground: 180 25% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 30% 8%;
+    --card-foreground: 180 25% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 8%;
+    --popover-foreground: 180 25% 10%;
 
-    /* Brand: vivid sunset orange */
-    --primary: 18 95% 55%;
+    /* Main waterfall / forest green */
+    --primary: 154 55% 32%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 30 100% 62%;
 
-    --secondary: 220 35% 12%;
+    /* Soft glowing green from the title */
+    --primary-glow: 88 65% 48%;
+
+    /* Deep forest overlay */
+    --secondary: 180 35% 12%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 24 20% 94%;
-    --muted-foreground: 220 10% 40%;
+    --muted: 160 18% 92%;
+    --muted-foreground: 180 10% 38%;
 
-    --accent: 18 95% 55%;
-    --accent-foreground: 0 0% 100%;
+    /* Accent lime-green from MEGHALAYA text */
+    --accent: 88 65% 48%;
+    --accent-foreground: 180 35% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 24 15% 88%;
-    --input: 24 15% 90%;
-    --ring: 18 95% 55%;
+    --border: 160 14% 85%;
+    --input: 160 14% 88%;
+    --ring: 154 55% 32%;
 
-    --radius: 0.875rem;
+    --radius: .875rem;
 
-    /* Dark surface (used in nav top bar, hero overlays, footer) */
-    --dark-surface: 220 35% 8%;
+    /* Dark jungle surfaces */
+    --dark-surface: 180 40% 8%;
     --dark-surface-foreground: 0 0% 100%;
 
-    /* Gradients */
-    --gradient-sunset: linear-gradient(135deg, hsl(18 95% 55%), hsl(30 100% 62%));
-    --gradient-sunset-soft: linear-gradient(135deg, hsl(18 95% 55% / 0.95), hsl(30 100% 62% / 0.9));
-    --gradient-hero-overlay: linear-gradient(
-      90deg,
-      hsl(220 35% 6% / 0.85) 0%,
-      hsl(220 35% 6% / 0.55) 45%,
-      hsl(220 35% 6% / 0.2) 100%
-    );
-    --gradient-card-overlay: linear-gradient(
-      to top,
-      hsl(220 35% 6% / 0.92) 0%,
-      hsl(220 35% 6% / 0.45) 50%,
-      hsl(220 35% 6% / 0) 100%
-    );
-    --gradient-honeymoon: linear-gradient(135deg, hsl(18 95% 55%), hsl(30 100% 62%));
+    /* Gradients inspired by waterfall + forest */
+    --gradient-sunset:
+        linear-gradient(
+            135deg,
+            hsl(154 55% 32%),
+            hsl(88 65% 48%)
+        );
 
-    /* Shadows */
-    --shadow-card: 0 10px 40px -12px hsl(220 35% 8% / 0.18);
-    --shadow-soft: 0 4px 20px -4px hsl(220 35% 8% / 0.08);
-    --shadow-glow: 0 20px 60px -20px hsl(18 95% 55% / 0.55);
-    --shadow-elevated: 0 30px 80px -30px hsl(220 35% 8% / 0.4);
+    --gradient-sunset-soft:
+        linear-gradient(
+            135deg,
+            hsl(154 55% 32% / .95),
+            hsl(88 65% 48% / .88)
+        );
 
-    /* Motion */
-    --transition-smooth: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-    --transition-snappy: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --gradient-hero-overlay:
+        linear-gradient(
+            90deg,
+            hsl(180 40% 6% / .88) 0%,
+            hsl(180 35% 8% / .58) 45%,
+            hsl(180 30% 10% / .18) 100%
+        );
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
+    --gradient-card-overlay:
+        linear-gradient(
+            to top,
+            hsl(180 40% 6% / .92) 0%,
+            hsl(180 35% 8% / .45) 50%,
+            hsl(180 35% 8% / 0) 100%
+        );
+
+    --gradient-honeymoon:
+        linear-gradient(
+            135deg,
+            hsl(154 55% 32%),
+            hsl(88 65% 48%)
+        );
+
+    /* Softer natural shadows */
+    --shadow-card:
+        0 10px 40px -12px hsl(180 35% 8% / .18);
+
+    --shadow-soft:
+        0 4px 20px -4px hsl(180 35% 8% / .08);
+
+    --shadow-glow:
+        0 20px 60px -20px hsl(154 55% 32% / .45);
+
+    --shadow-elevated:
+        0 30px 80px -30px hsl(180 35% 8% / .42);
+
+    --transition-smooth:
+        all .4s cubic-bezier(.22, 1, .36, 1);
+
+    --transition-snappy:
+        all .2s cubic-bezier(.4, 0, .2, 1);
+
+    /* Sidebar */
+    --sidebar-background: 160 18% 97%;
+    --sidebar-foreground: 180 10% 28%;
+
+    --sidebar-primary: 154 55% 32%;
+    --sidebar-primary-foreground: 0 0% 100%;
+
+    --sidebar-accent: 160 18% 92%;
+    --sidebar-accent-foreground: 180 25% 12%;
+
+    --sidebar-border: 160 12% 86%;
+    --sidebar-ring: 154 55% 32%;
+}
 
   .dark {
     --background: 220 35% 6%;
